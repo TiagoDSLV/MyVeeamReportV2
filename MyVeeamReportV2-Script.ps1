@@ -209,9 +209,9 @@ $showTaskWFBc = $SDCopy
 # Show Successful Backup Copy Sessions within time frame ($reportMode)
 $showSuccessBc = $False
 # Show Successful Backup Copy Tasks from Sessions within time frame ($reportMode)
-$showTaskSuccessBc = $False
+$showTaskSuccessBc = $false
 # Only show last Session for each Backup Copy Job
-$onlyLastBc = $SDCopy
+$onlyLastBc = $false
 # Only report on the following Backup Copy Job(s)
 #$bcopyJob = @("Backup Copy Job 1","Backup Copy Job 3","Backup Copy Job *")
 $bcopyJob = @("")
@@ -219,31 +219,31 @@ $bcopyJob = @("")
 # Show Tape Backup Session Summary
 $showSummaryTp = $SDTape
 # Show Tape Backup Job Status
-$showJobsTp = $False
+$showJobsTp = $false
 # Show detailed information for Tape Backup Sessions (Avg Speed, Total(GB), Read(GB), Transferred(GB))
-$showDetailedTp = $False
+$showDetailedTp = $false
 # Show all Tape Backup Sessions within time frame ($reportMode)
-$showAllSessTp = $False
+$showAllSessTp = $false
 # Show all Tape Backup Tasks from Sessions within time frame ($reportMode)
-$showAllTasksTp = $False
+$showAllTasksTp = $false
 # Show Waiting Tape Backup Sessions
-$showWaitingTp = $False
+$showWaitingTp = $false
 # Show Idle Tape Backup Sessions
-$showIdleTp = $False
+$showIdleTp = $false
 # Show Pending Tape Backup Tasks
-$showPendingTasksTp = $False
+$showPendingTasksTp = $false
 # Show Working Tape Backup Jobs
-$showRunningTp = $False
+$showRunningTp = $false
 # Show Working Tape Backup Tasks
-$showRunningTasksTp = $False
+$showRunningTasksTp = $false
 # Show Tape Backup Sessions w/Warnings or Failures within time frame ($reportMode)
-$showWarnFailTp = $False
+$showWarnFailTp = $false
 # Show Tape Backup Tasks w/Warnings or Failures from Sessions within time frame ($reportMode)
 $showTaskWFTp = $SDTape
 # Show Successful Tape Backup Sessions within time frame ($reportMode)
-$showSuccessTp = $False
+$showSuccessTp = $false
 # Show Successful Tape Backup Tasks from Sessions within time frame ($reportMode)
-$showTaskSuccessTp = $False
+$showTaskSuccessTp = $false
 # Only show last Session for each Tape Backup Job
 $onlyLastTp = $SDTape
 # Only report on the following Tape Backup Job(s)
@@ -253,17 +253,17 @@ $tapeJob = @("")
 # Show Agent Backup Session Summary
 $showSummaryEp = $SDAgent
 # Show Agent Backup Job Status
-$showJobsEp = $False
+$showJobsEp = $false
 # Show Agent Backup Job Size (total)
-$showBackupSizeEp = $False
+$showBackupSizeEp = $false
 # Show all Agent Backup Sessions within time frame ($reportMode)
-$showAllSessEp = $False
+$showAllSessEp = $false
 # Show Running Agent Backup jobs
-$showRunningEp = $False
+$showRunningEp = $false
 # Show Agent Backup Sessions w/Warnings or Failures within time frame ($reportMode)
 $showWarnFailEp = $SDAgent
 # Show Successful Agent Backup Sessions within time frame ($reportMode)
-$showSuccessEp = $False
+$showSuccessEp = $false
 # Only show last session for each Agent Backup Job
 $onlyLastEp = $SDAgent
 # Only report on the following Agent Backup Job(s)
@@ -273,23 +273,23 @@ $epbJob = @("")
 # Show SureBackup Session Summary
 $showSummarySb = $SDSure
 # Show SureBackup Job Status
-$showJobsSb = $False
+$showJobsSb = $false
 # Show all SureBackup Sessions within time frame ($reportMode)
-$showAllSessSb = $False
+$showAllSessSb = $false
 # Show all SureBackup Tasks from Sessions within time frame ($reportMode)
-$showAllTasksSb = $False
+$showAllTasksSb = $false
 # Show Running SureBackup Jobs
-$showRunningSb = $False
+$showRunningSb = $false
 # Show Running SureBackup Tasks
-$showRunningTasksSb = $False
+$showRunningTasksSb = $false
 # Show SureBackup Sessions w/Warnings or Failures within time frame ($reportMode)
-$showWarnFailSb = $False
+$showWarnFailSb = $false
 # Show SureBackup Tasks w/Warnings or Failures from Sessions within time frame ($reportMode)
 $showTaskWFSb = $SDSure
 # Show Successful SureBackup Sessions within time frame ($reportMode)
-$showSuccessSb = $False
+$showSuccessSb = $false
 # Show Successful SureBackup Tasks from Sessions within time frame ($reportMode)
-$showTaskSuccessSb = $False
+$showTaskSuccessSb = $false
 # Only show last Session for each SureBackup Job
 $onlyLastSb = $SDSure
 # Only report on the following SureBackup Job(s)
