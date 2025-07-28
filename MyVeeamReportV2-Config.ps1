@@ -68,8 +68,8 @@ infrastructure details like repositories, proxies and license status.
     $replicaCritical = 10
     $replicaWarn = 20
     # Jours restant sur la licence
-    $licenseCritical = 30
-    $licenseWarn = 90
+    $licenseCritical = 15
+    $licenseWarn = 30
 
 # Location of Veeam Core dll  
     $VeeamCorePath = "C:\Program Files\Veeam\Backup and Replication\Backup\Veeam.Backup.Core.dll"
