@@ -36,7 +36,10 @@ $scriptFile = Join-Path $destinationFolder "MyVeeamReportV2-Script.ps1"
 $configFile = "MyVeeamReportV2-Config.ps1"
 
 # Définir l'action
-$action = New-ScheduledTaskAction -Execute "powershell.exe" -Argument "-NoProfile -WindowStyle Hidden -ExecutionPolicy Bypass -File `"$scriptFile`" -ConfigFileName `"$configFile`""
+$action = New-ScheduledTaskAction `
+    -Execute "powershell.exe" `
+    -Argument "-ExecutionPolicy Bypass -File `"$scriptFile`" -ConfigFileName `"$configFile`"" `
+    -WorkingDirectory $destinationFolder
 
 # Déclencheur : tous les jours à 8h30
 $trigger = New-ScheduledTaskTrigger -Daily -At 8:30AM
