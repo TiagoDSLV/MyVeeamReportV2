@@ -1,6 +1,6 @@
 <#====================================================================
 Author        : Tiago DA SILVA - ATHEO INGENIERIE
-Version       : 1.0.6
+Version       : 1.0.7
 Creation Date : 2025-07-01
 Last Update   : 2025-07-01
 GitHub Repo   : https://github.com/TiagoDSLV/MyVeeamReportV2/
@@ -307,6 +307,11 @@ $showReplicaTarget = $SDReplication
 # Show License expiry info
 $showLicExp = $true
 #endregion
+
+# Create reports folder 
+if (-not (Test-Path -Path $path)) {
+    New-Item -ItemType Directory -Path $path | Out-Null
+}
 
 #Region Connect
 # Connect to VBR server
