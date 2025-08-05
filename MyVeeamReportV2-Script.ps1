@@ -152,9 +152,6 @@ $showSuccessBk = $False
 $showTaskSuccessBk = $False
 # Only show last Session for each Backup Job
 $onlyLastBk = $SDBackup
-# Only report on the following Backup Job(s)
-#$backupJob = @("Backup Job 1","Backup Job 3","Backup Job *")
-$backupJob = @("")
 
 # Show Replication Session Summary
 $showSummaryRp = $SDReplication
