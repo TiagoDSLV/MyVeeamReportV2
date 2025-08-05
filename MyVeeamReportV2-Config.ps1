@@ -1,6 +1,6 @@
 <#====================================================================
 Author        : Tiago DA SILVA - ATHEO INGENIERIE
-Version       : 1.0.3
+Version       : 1.0.4
 Creation Date : 2025-07-01
 Last Update   : 2025-07-01
 GitHub Repo   : https://github.com/TiagoDSLV/MyVeeamReportV2/
@@ -73,3 +73,7 @@ infrastructure details like repositories, proxies and license status.
 
 # Location of Veeam Core dll  
     $VeeamCorePath = "C:\Program Files\Veeam\Backup and Replication\Backup\Veeam.Backup.Core.dll"
+
+# Only report on the following Backup Job(s)
+#$backupJob = @("Backup Job 1","Backup Job 3","Backup Job *")
+$backupJob = @("")
