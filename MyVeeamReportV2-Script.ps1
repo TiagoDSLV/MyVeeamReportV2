@@ -57,7 +57,7 @@ try {
 	        $remoteScriptContent | Set-Content -Path $OutputPath -Encoding UTF8 -Force
 	        Write-Host "Script updated."
 	        Write-Host "Restarting script..."
-	        Start-Process powershell -ArgumentList "-ExecutionPolicy Bypass -File `"$OutputPath`""
+	        Start-Process powershell -ArgumentList "-ExecutionPolicy Bypass -File `"$OutputPath`" -ConfigFileName $ConfigFileName"
 	        exit
 	    } catch {
 	        Write-Warning "Update error: $_"
