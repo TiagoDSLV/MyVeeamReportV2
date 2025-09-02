@@ -30,6 +30,8 @@ infrastructure details like repositories, proxies and license status.
     $path = "C:\Tools\MyVeeamReport\Reports\"
 # Rétention des fichiers de rapports JSON en jours
     $JPurge = 60
+# Infrastructure HYPER-V
+    $isHyperV = $false
 	
 # Report mode (RPO) - valid modes: any number of hours, Weekly or Monthly
 # 24, 48, "Weekly", "Monthly"
