@@ -1,6 +1,6 @@
 <#====================================================================
 Author        : Tiago DA SILVA - ATHEO INGENIERIE
-Version       : 1.0.8
+Version       : 1.0.9
 Creation Date : 2025-07-01
 Last Update   : 2025-07-01
 GitHub Repo   : https://github.com/TiagoDSLV/MyVeeamReportV2/
@@ -607,7 +607,7 @@ $allJobsSbTmp = @()
 $sessListSbTmp = @()
 Foreach ($SbJob in $surebJob) {
 $allJobsSbTmp += $allJobsSb | Where-Object {$_.Name -like $SbJob}
-$sessListSbTmp += $sessListSb | Where-Object {$_.JobName -like $SbJob}
+$sessListSbTmp += $sessListSb | Where-Object {$_.Name -like $SbJob}
 }
 $allJobsSb = $allJobsSbTmp | Sort-Object Id -Unique
 $sessListSb = $sessListSbTmp | Sort-Object Id -Unique
@@ -616,7 +616,7 @@ If ($onlyLastSb) {
 $tempSessListSb = $sessListSb
 $sessListSb = @()
 Foreach($job in $allJobsSb) {
-$sessListSb += $tempSessListSb | Where-Object {$_.Jobname -eq $job.name} | Sort-Object EndTime -Descending | Select-Object -First 1
+$sessListSb += $tempSessListSb | Where-Object {$_.Name -eq $job.name} | Sort-Object EndTime -Descending | Select-Object -First 1
 }
 }
 # Get SureBackup Session information
@@ -1305,9 +1305,8 @@ If ($showSummaryProtect) {
     }
     $sumprotectHead = if ($showUnprotectedVMsInfo) { $subHead01inf } else { $subHead01err }
   }
-}
-
-$vbrMasterHash = @{
+  
+  $vbrMasterHash = @{
   WarningVM = @($warnVMs).Count
   ProtectedVM = @($successVMs).Count
   UnprotectedVM = @($missingVMs).Count
@@ -1325,6 +1324,7 @@ $summaryProtect = $vbrMasterObj | Select-Object @{Name="% Protected"; Expression
 
 $bodySummaryProtect = $summaryProtect | ConvertTo-HTML -Fragment
 $bodySummaryProtect = $sumprotectHead + "VM Backup Protection Summary" + $subHead02 + $bodySummaryProtect
+}
 #endregion
 
 #region Get VMs Missing Backups
